@@ -38,12 +38,20 @@ src_dir: ''
 # folder. Further, each item can have any/all of the parameters that class uses.
 # The defaults below show what is used when this is omitted.
 inputs:
-  - class: InputCsvData
+  - class: InputSdmxMl_Multiple
     # This describes the data files, relative to the "src_dir" indicated above.
-    path_pattern: data/*-*.csv
-  - class: InputYamlMdMeta
+    path_pattern: data/*-*.xml
+    dsd: ''
+    drop_singleton_dimensions: true
+    drop_dimensions:
+      - SOURCE_DETAIL
+      - COMMENT_OBS
+    dimension_map:
+      REF_AREA|KG: ''
+    import_codes: true
+  - class: InputCsvMeta
     # This describes the meta files, relative to the "src_dir" indicated above.
-    path_pattern: meta/*-*.md
+    path_pattern: meta/*-*.csv
     # This specifies whether or not to use Git to calculate the "last updated"
     # dates for data files.
     git: true
