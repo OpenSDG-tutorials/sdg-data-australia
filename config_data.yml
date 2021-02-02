@@ -39,7 +39,7 @@ src_dir: ''
 # The defaults below show what is used when this is omitted.
 inputs:
   - class: InputSdmxMl_Multiple
-    path_pattern: data/*-*.xml
+    path_pattern: data/*.xml
     dsd: 'SDG_DSD_v1.xml'
     drop_singleton_dimensions: true
     drop_dimensions:
