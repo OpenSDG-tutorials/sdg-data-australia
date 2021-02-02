@@ -40,7 +40,7 @@ src_dir: ''
 inputs:
   - class: InputSdmxMl_Multiple
     path_pattern: data/*-*.xml
-    dsd: 'SDG_DSD.v1.xml'
+    dsd: 'SDG_DSD_v1.xml'
     drop_singleton_dimensions: true
     drop_dimensions:
       - SOURCE_DETAIL
@@ -79,7 +79,7 @@ translations:
   - class: TranslationInputYaml
     source: translations
   - class: TranslationInputSdmx
-    source: 'SDG_DSD.v1.xml'
+    source: 'SDG_DSD_v1.xml'
 
 # Reporting status extra fields
 # -----------------------------
